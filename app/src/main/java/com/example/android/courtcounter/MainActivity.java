@@ -26,30 +26,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * This method is called when the Free Throw button is clicked.
-     */
-    public void addOneForTeamA(View view) {
-        scoreTeamA = scoreTeamA + 1;
-        displayForTeamA(scoreTeamA);
-    }
-
-    /**
-     * This method is called when the +2 Points button is clicked.
-     */
-    public void addTwoForTeamA(View view) {
-        scoreTeamA = scoreTeamA + 2;
-        displayForTeamA(scoreTeamA);
-    }
-
-    /**
-     * This method is called when the +3 Points button is clicked.
-     */
-    public void addThreeForTeamA(View view) {
-        scoreTeamA = scoreTeamA + 3;
-        displayForTeamA(scoreTeamA);
-    }
-
-    /**
      * Displays the given score for Team B.
      */
     public void displayForTeamB(int score) {
@@ -58,7 +34,31 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * This method is called when the Free Throw button is clicked for Team B.
+     * Increase Team A's score by 1 when button is clicked.
+     */
+    public void addOneForTeamA(View view) {
+        scoreTeamA = scoreTeamA + 1;
+        displayForTeamA(scoreTeamA);
+    }
+
+    /**
+     * Increase Team A's score by 2 when button is clicked.
+     */
+    public void addTwoForTeamA(View view) {
+        scoreTeamA = scoreTeamA + 2;
+        displayForTeamA(scoreTeamA);
+    }
+
+    /**
+     * Increase Team A's score by 3 when button is clicked.
+     */
+    public void addThreeForTeamA(View view) {
+        scoreTeamA = scoreTeamA + 3;
+        displayForTeamA(scoreTeamA);
+    }
+
+    /**
+     * Increase Team B's score by 1 when button is clicked.
      */
     public void addOneForTeamB(View view) {
         scoreTeamB = scoreTeamB + 1;
@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * This method is called when the +2 Points button is clicked.
+     * Increase Team B's score by 2 when button is clicked.
      */
     public void addTwoForTeamB(View view) {
         scoreTeamB = scoreTeamB + 2;
@@ -74,10 +74,20 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * This method is called when the +3 Points button is clicked.
+     * Increase Team B's score by 3 when button is clicked.
      */
     public void addThreeForTeamB(View view) {
         scoreTeamB =scoreTeamB + 3;
+        displayForTeamB(scoreTeamB);
+    }
+
+    /**
+     * This method is called when the RESET button is clicked.
+     */
+    public void resetScoresToZero(View view) {
+        scoreTeamA = 0;
+        scoreTeamB = 0;
+        displayForTeamA(scoreTeamA);
         displayForTeamB(scoreTeamB);
     }
 
